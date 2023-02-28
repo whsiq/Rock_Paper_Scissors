@@ -12,9 +12,6 @@ public class RockPaperScissorsFrame extends JFrame {
     JButton paperBtn;
     JButton scissorsBtn;
     JButton quitBtn;
-    ImageIcon rockIcon;
-    ImageIcon paperIcon;
-    ImageIcon scissorsIcon;
 
     JPanel statsPnl;
     JLabel playerWinLbl;
@@ -33,9 +30,7 @@ public class RockPaperScissorsFrame extends JFrame {
     Font titleFont = new Font(Font.SANS_SERIF, Font.BOLD, 32);
 
     Random rnd = new Random();
-    public int playerMove;
     public int computerMove;
-    int gameCnt;
     int playerWinCnt;
     int computerWinCnt;
     int tieCnt;
@@ -84,13 +79,13 @@ public class RockPaperScissorsFrame extends JFrame {
         gamePnl.setLayout(new GridLayout(4, 1));
 
         rockBtn = new JButton(new ImageIcon("src/rock.jpg"));
-        rockBtn.addActionListener((ActionEvent ae) -> {runGame(0);});
+        rockBtn.addActionListener((ActionEvent ae) -> runGame(0));
 
         paperBtn = new JButton(new ImageIcon("src/paper.jpg"));
-        paperBtn.addActionListener((ActionEvent ae) -> {runGame(1);});
+        paperBtn.addActionListener((ActionEvent ae) -> runGame(1));
 
         scissorsBtn = new JButton(new ImageIcon("src/scissors.jpg"));
-        scissorsBtn.addActionListener((ActionEvent ae) -> {runGame(2);});
+        scissorsBtn.addActionListener((ActionEvent ae) -> runGame(2));
 
         quitBtn = new JButton("Quit");
         quitBtn.addActionListener((ActionEvent ae) -> System.exit(0));
